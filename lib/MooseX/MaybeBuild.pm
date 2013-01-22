@@ -1,17 +1,8 @@
-use strict;
-use warnings;
 package MooseX::MaybeBuild;
-{
-  $MooseX::MaybeBuild::VERSION = '0.200001';
-}
-# ABSTRACT: write-once, read-many attributes for Moose
 
 use Class::Throwable qw/ MooseX::MaybeBuild::Attribute::NoValue /;
 
 package MooseX::MaybeBuild::Attribute;
-{
-  $MooseX::MaybeBuild::Attribute::VERSION = '0.200001';
-}
 use Moose::Role 0.90;
 use Try::Tiny;
 
@@ -136,9 +127,6 @@ around _inline_init_from_default => sub {
 use Moose::Role 0.90;
 
 package Moose::Meta::Attribute::Custom::Trait::MaybeBuild;
-{
-  $Moose::Meta::Attribute::Custom::Trait::MaybeBuild::VERSION = '0.200001';
-}
 
 sub register_implementation { 'MooseX::MaybeBuild::Attribute' }
 
